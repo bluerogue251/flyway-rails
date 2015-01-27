@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'flyway_rails'
+  s.name        = 'flyway-rails'
   s.version     = '0.0.0'
   s.date        = '2015-01-26'
   s.summary     = "A thin wrapper for using flyway"
@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Teddy Widom"]
   s.email       = 'theodore.widom@gmail.com'
   s.files       = ["lib/flyway/rails.rb"]
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/bluerogue251/flyway-rails'
   s.license     = 'MIT'
 end
