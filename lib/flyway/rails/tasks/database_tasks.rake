@@ -26,7 +26,12 @@ def config
 end
 
 def flyway_command_options
-  "-url=jdbc:postgresql://#{host}:#{port}/#{database} -user=#{username} -password=#{password} -sqlMigrationPrefix='' -sqlMigrationSeparator=_"
+  "-url=jdbc:postgresql://#{host}:#{port}/#{database} " +
+  "-user=#{username} " +
+  "-password=#{password} " +
+  "-sqlMigrationPrefix='' " +
+  "-sqlMigrationSeparator=_" +
+  "-locations=filesystem:#{Flyway::Rails::MIGRATION_DIRECTORY}"
 end
 
 def executable_path

@@ -1,14 +1,24 @@
 # flyway-rails
 A thin wrapper around [flyway db](http://flywaydb.org) for Rails database migrations
 
-Adds rake tasks to manage your database shchema.
+Adds rake tasks to manage your database schema.
 
-Add this gem to your Rails app `Gemfile` as such:
+Add this gem to your Rails app:
 
 ```
 gem 'flyway-rails', github: 'bluerogue251/flyway-rails'
 ```
 
-In an initializer in your app, set the constant Flyway::Rails::MIGRATION_DIRECTORY` equal to the path where you keep your migrations.
+In an initializer in your app, set the directory where you keep your migrations:
 
-You can find the rake tasks and their descriptions by running `$ rake -T | grep flyway`.
+```
+# config/initializers/flyway_rails.rb
+
+Flyway::Rails::MIGRATION_DIRECTORY = 'path/to/your/migrations'
+```
+
+You can then list the new rake tasks by running:
+
+```
+$ rake -T | grep flyway
+```
