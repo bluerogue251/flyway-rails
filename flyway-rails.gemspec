@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "A thin wrapper for using flyway database migrations with Ruby on Rails"
   s.authors     = ["Teddy Widom"]
   s.email       = 'theodore.widom@gmail.com'
-  s.files       = ["lib/flyway_rails.rb"]
+  s.files       = ["lib/flyway/rails.rb"]
   s.homepage    = ''
   s.license     = 'MIT'
 end

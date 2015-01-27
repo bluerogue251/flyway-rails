@@ -1,0 +1,1 @@
+require 'flyway/rails/railtie'
