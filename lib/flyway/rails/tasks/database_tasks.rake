@@ -13,8 +13,8 @@ def password
   password = Shellwords.escape(config['password'])
 end
 
-def username
-  Shellwords.escape(config['username'])
+def user
+  Shellwords.escape(config['user'])
 end
 
 def database
@@ -27,15 +27,15 @@ end
 
 def flyway_command_options
   "-url=jdbc:postgresql://#{host}:#{port}/#{database} " +
-  "-user=#{username} " +
+  "-user=#{user} " +
   "-password=#{password} " +
   "-sqlMigrationPrefix='' " +
-  "-sqlMigrationSeparator=_" +
+  "-sqlMigrationSeparator=_ " +
   "-locations=filesystem:#{Flyway::Rails::MIGRATION_DIRECTORY}"
 end
 
 def executable_path
-  File.expand_path("../../../flyway", __FILE__)
+  File.expand_path("../../../../../flyway", __FILE__)
 end
 
 namespace :flyway do
