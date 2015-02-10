@@ -45,7 +45,7 @@ module Flyway
           "-user=#{user}",
           "-password=#{password}",
           "-sqlMigrationPrefix=''",
-          "-sqlMigrationSeparator=_",
+          "-sqlMigrationSeparator=__",
           "-locations=filesystem:#{Flyway::Rails::MIGRATION_DIRECTORY}"
         ].join(' ')
       end
